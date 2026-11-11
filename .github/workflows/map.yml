@@ -1,39 +1,7 @@
 {
   "name": "shape-map",
   "on": {
-    "pull_request": {
-      "types": [
-        "opened"
-      ],
-      "workflows": {
-        "unexpected": "name"
-      }
-    },
-    "issues": {
-      "types": [
-        "opened"
-      ],
-      "workflows": {
-        "unexpected": "name"
-      }
-    },
-    "issue_comment": {
-      "types": [
-        "created"
-      ],
-      "workflows": {
-        "unexpected": "name"
-      }
-    },
-    "pull_request_review": {
-      "types": [
-        "submitted"
-      ],
-      "workflows": {
-        "unexpected": "name"
-      }
-    },
-    "push": {}
+    "workflow_dispatch": {}
   },
   "permissions": {},
   "jobs": {

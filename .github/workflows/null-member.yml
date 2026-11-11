@@ -1,43 +1,7 @@
 {
   "name": "shape-null-member",
   "on": {
-    "pull_request": {
-      "types": [
-        "opened"
-      ],
-      "workflows": [
-        "Impossible first r-d68291e45441",
-        null
-      ]
-    },
-    "issues": {
-      "types": [
-        "opened"
-      ],
-      "workflows": [
-        "Impossible first r-d68291e45441",
-        null
-      ]
-    },
-    "issue_comment": {
-      "types": [
-        "created"
-      ],
-      "workflows": [
-        "Impossible first r-d68291e45441",
-        null
-      ]
-    },
-    "pull_request_review": {
-      "types": [
-        "submitted"
-      ],
-      "workflows": [
-        "Impossible first r-d68291e45441",
-        null
-      ]
-    },
-    "push": {}
+    "workflow_dispatch": {}
   },
   "permissions": {},
   "jobs": {

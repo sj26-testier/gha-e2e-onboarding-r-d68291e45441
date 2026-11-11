@@ -24,8 +24,7 @@
         "submitted"
       ],
       "workflows": "Impossible upstream r-d68291e45441"
-    },
-    "push": {}
+    }
   },
   "permissions": {},
   "jobs": {

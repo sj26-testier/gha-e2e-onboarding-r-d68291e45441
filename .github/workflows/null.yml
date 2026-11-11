@@ -24,8 +24,7 @@
         "submitted"
       ],
       "workflows": null
-    },
-    "push": {}
+    }
   },
   "permissions": {},
   "jobs": {
