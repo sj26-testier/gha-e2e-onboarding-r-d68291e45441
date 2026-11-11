@@ -1,0 +1,42 @@
+{
+  "name": "shape-empty",
+  "on": {
+    "pull_request": {
+      "types": [
+        "opened"
+      ],
+      "workflows": []
+    },
+    "issues": {
+      "types": [
+        "opened"
+      ],
+      "workflows": []
+    },
+    "issue_comment": {
+      "types": [
+        "created"
+      ],
+      "workflows": []
+    },
+    "pull_request_review": {
+      "types": [
+        "submitted"
+      ],
+      "workflows": []
+    },
+    "push": {}
+  },
+  "permissions": {},
+  "jobs": {
+    "receipt": {
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "printf '%s\\n' 'CASE=empty'\njq '{action, number, issue: (.issue | if . then {number,id} else null end), comment: (.comment | if . then {id} else null end), review: (.review | if . then {id,state,commit_id} else null end), pull_request: (.pull_request | if . then {number, head: (.head | {ref,sha}), base: (.base | {ref,sha})} else null end)}' \"$GITHUB_EVENT_PATH\"\nprintf 'EVENT=%s\\nREF=%s\\nSHA=%s\\nRUN_ID=%s\\nATTEMPT=%s\\n' \"$GITHUB_EVENT_NAME\" \"$GITHUB_REF\" \"$GITHUB_SHA\" \"$GITHUB_RUN_ID\" \"$GITHUB_RUN_ATTEMPT\"\n"
+        }
+      ]
+    }
+  }
+}
